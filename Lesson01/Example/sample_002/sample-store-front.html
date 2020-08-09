@@ -322,5 +322,18 @@
       </div>
 
     </section>
+    <script>
+      var products = document.getElementsByClassName('item');
+      var info = "name, price, unit\n";
+      for (let i = 0; i < products.length; i++) {
+          var name = products[i].getElementsByClassName('header')[0].textContent;
+          var price = products[i].getElementsByTagName('span')[0].textContent.split(" / ");
+          
+          info += `${name}, ${price[0]}, ${price[1]}\n`;
+      }
+
+      console.log(info);
+      
+    </script>
   </body>
 </html>
